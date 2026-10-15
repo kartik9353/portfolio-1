@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartik | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #111c33;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            margin: 15px 0;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            margin-top: 15px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #7dd3fc;
+        }
+
+        h2.section-title {
+            color: #38bdf8;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #334155;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #e2e8f0;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #7dd3fc;
+            padding: 10px 18px;
+            border-radius: 8px;
+        }
+
+        .contact a {
+            color: #38bdf8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111c33;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 10px 0 0;
+                display: inline-block;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Kartik.</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <p>Hello, I'm</p>
+        <h1><span>Kartik</span></h1>
+        <h2>BE AIML Student & Aspiring Developer</h2>
+        <p>
+            I am a second-year Artificial Intelligence and
+            Machine Learning engineering student passionate
+            about programming, web development, and technology.
+        </p>
+        <a href="#about" class="btn">Explore My Portfolio</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            <p>
+                My name is Kartik. I am pursuing a Bachelor of
+                Engineering in Artificial Intelligence and
+                Machine Learning at SEA College of Engineering.
+                I enjoy learning programming languages, building
+                projects, and exploring new technologies.
+            </p>
+            <br>
+            <p><strong>Date of Birth:</strong> 05 September 2006</p>
+            <p><strong>Current CGPA:</strong> 8.7 (First Year)</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="card">
+            <h3>Bachelor of Engineering (BE)</h3>
+            <p>Artificial Intelligence and Machine Learning</p>
+            <p>SEA College of Engineering</p>
+            <p>Currently in Second Year</p>
+            <p>First-Year CGPA: 8.7</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Python</span>
+            <span class="skill">C Programming</span>
+        </div>
+
+        <h2 class="section-title" style="margin-top: 40px;">
+            Tools
+        </h2>
+        <div class="skills">
+            <span class="skill">VS Code</span>
+            <span class="skill">Git</span>
+            <span class="skill">OpenCode</span>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="card">
+            <p>
+                Interested in connecting or collaborating on a project?
+            </p>
+            <p>
+                Email:
+                <a href="mailto:kartkhudgi@gmail.com">
+                    kartkhudgi@gmail.com
+                </a>
+            </p>
+            <button class="btn" onclick="showMessage()">
+                Say Hello
+            </button>
+            <p id="message" style="margin-top: 15px;"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Kartik. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "Thanks for visiting my portfolio! Feel free to contact me.";
+        }
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
